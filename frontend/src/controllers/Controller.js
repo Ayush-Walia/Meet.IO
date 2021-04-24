@@ -1,11 +1,12 @@
 import { io } from "socket.io-client";
 import Peer from 'peerjs';
 
-const socket = io('ws://localhost:3030');
+const socket = io('https://meet-io.herokuapp.com');
 const myPeer = new Peer(undefined, {
     path: '/peerjs',
-    host: 'localhost',
-    port: '3031'
+    secure: true, 
+    host: 'meet-io.herokuapp.com',
+    port: '443'
 });
 
 let localVideoStream, addParticipantCall, participants, addParticipant, removeParticipant, remoteVideoRef, RoomID, myPeerID, toggleParticipantVideo, setLocalVideoInfo;

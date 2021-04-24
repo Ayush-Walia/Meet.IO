@@ -1,14 +1,12 @@
 const express = require('express');
 const app = express();
-const socketServer = require('http').Server(app);
-const peerJSServer = require('http').Server(app);
-const io = require('socket.io')(socketServer, {
-  cors: { origin: "*" }
-})
+const server = require('http').Server(app);
+const io = require('socket.io')(server, {
+  cors: { origin: "https://meet-io.netlify.app" }
+});
 const { ExpressPeerServer } = require('peer');
-const peerServer = ExpressPeerServer(peerJSServer);
-const socketServerPort = process.env.PORT || 3030;
-const peerJSServerPort = process.env.PORT || 3031;
+const peerServer = ExpressPeerServer(server);
+const serverPort = process.env.PORT || 3030;
 
 app.use('/peerjs', peerServer);
 
@@ -44,5 +42,4 @@ io.on('connection', socket => {
   })
 })
 
-socketServer.listen(socketServerPort, () => console.log(`socket server listening on ${socketServerPort}`));
-peerJSServer.listen(peerJSServerPort, () => console.log(`peerJS server listening on ${peerJSServerPort}`));
+server.listen(serverPort, () => console.log(`socket server listening on ${serverPort}`));
