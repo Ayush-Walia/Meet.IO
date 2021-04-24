@@ -1,0 +1,101 @@
+.container {
+  background-color: black;
+  height: 100%;
+}
+
+.menu_video{
+  height: 10vh;
+  width: 10vw;
+  transition: 1s ease;
+}
+
+.menu_video_card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  width: 10vw;
+  padding: 0;
+  position: absolute !important;
+  top: 0;
+  background-color: #212121 !important;
+  transition: 1s ease;
+}
+
+.space_no_padding {
+  padding: 0;
+}
+
+.participant_name {
+  color: white !important;
+}
+
+.floating_menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 !important;
+}
+
+.floating_menu_container {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+}
+
+.main_video {
+  height: 92vh;
+  transition: opacity 1s ease;
+}
+
+.main_video_card {
+  align-items: center;
+  justify-content: center;
+  height: 92vh;
+  width: 100%;
+  padding: 0;
+  background-color: #212121 !important;
+}
+
+video {
+  object-fit: cover;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.video_area {
+  height: 92vh;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  top: 0px;
+  right: 0px;
+  overflow: hidden;
+  animation: show 0.4s ease;
+} 
+
+@keyframes show {
+  0% {
+      opacity: 0;
+      transform: scale(0.4) translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+  }
+}
+
+.remote_video_card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-color: #212121 !important;
+}

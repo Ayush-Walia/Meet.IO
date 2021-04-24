@@ -1,0 +1,28 @@
+.view_container {
+  height: 92vh;
+}
+
+.chat_panel {
+  height: 100vh;
+  width: 100%;
+  transition: 0.35s ease;
+}
+
+.video_area {
+  transition: 0.35s ease;
+}
+
+.not_found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.result_page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}

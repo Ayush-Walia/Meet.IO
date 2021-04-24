@@ -1,0 +1,22 @@
+.container{
+    background: url("../../assets/back.svg") no-repeat;
+    background-size: cover;
+    background-position: bottom right;
+    width: 100vw;
+    height: 100vh;
+}
+
+.logo {
+    margin-left: 5vw;
+    margin-top: 5vh;
+}
+
+.join_options {
+    margin-left: 5vw;
+    margin-top: 20vh;
+}
+
+.join_options_or {
+    margin-left: 6vw;
+}
+
