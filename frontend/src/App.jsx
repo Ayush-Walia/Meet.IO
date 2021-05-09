@@ -33,9 +33,9 @@ function App() {
                   </div>
                 </Row>
                 <Row align="bottom" className="bottom_bar">
-                  <Col span={showChat ? 18 : 24}>
+                  <div style={showChat ? { width: '75vw' } : { width: '100vw' }}>
                     <BottomBar />
-                  </Col>
+                  </div>
                 </Row>
               </MessageNotificationProvider>
             </ParticipantsProvider>
